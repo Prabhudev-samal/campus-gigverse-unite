@@ -15,6 +15,9 @@ import OrdersPage from "@/pages/OrdersPage";
 import MyGigsPage from "@/pages/MyGigsPage";
 import AddGigPage from "@/pages/AddGigPage";
 import NotFound from "@/pages/NotFound";
+import { AdminRoute, UserRoute } from "@/components/ProtectedRoute";
+import UserDashboard from "@/pages/UserDashboard";
+import AdminDashboard from "@/pages/AdminDashboard";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +39,8 @@ const App = () => (
             <Route path="/my-gigs" element={<MyGigsPage />} />
             <Route path="/add-gig" element={<AddGigPage />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/dashboard" element={<UserRoute><UserDashboard /></UserRoute>} />
+            <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
           </Routes>
           <Footer />
         </BrowserRouter>
