@@ -42,7 +42,7 @@ const LoginPage = () => {
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full px-4 py-2.5 rounded-lg border bg-background text-sm focus:ring-2 focus:ring-primary outline-none"
-              placeholder="your.email@university.edu"
+              placeholder="yourRegdno@cgu-odisha.ac.in"
             />
           </div>
           <div className="space-y-2">
